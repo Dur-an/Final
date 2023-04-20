@@ -36,7 +36,14 @@ function Portfolio(props, ref) {
         };
     }, []);
 
-    const portfolioItems = [{ category: 'Modern', image: modern2, previewLink: '', detailsLink: 'portfolio-details-modern.html', des: "Click here to check out our Modern selection" }, { category: 'Modern', image: modern3, previewLink: '', detailsLink: 'portfolio-details-modern.html', des: "Click here to check out our Modern selection" }, { category: 'Traditional', image: Trad1, previewLink: hero_img, detailsLink: 'portfolio-details-traditional.html', des: "Check out our Traditional selection." }, { category: 'Traditional', image: Trad2, previewLink: hero_img, detailsLink: 'portfolio-details-traditional.html', des: "Check out our Traditional selection." }, { category: 'Rustic', image: rustic2, previewLink: 'assets/img/portfolio/rustic/rustic2.png', detailsLink: 'portfolio-details-rustic.html', des: "Check out our Rustic selection." }, { category: 'Rustic', image: rustic3, previewLink: 'assets/img/portfolio/rustic/rustic2.png', detailsLink: 'portfolio-details-rustic.html', des: "Check out our Rustic selection." },];
+    const portfolioItems = [{ category: 'Modern', image: modern2, previewLink: '', detailsLink: 'portfolio-details-modern.html', des: "Click here to check out our Modern selection" },
+     { category: 'Modern', image: modern3, previewLink: '', detailsLink: 'portfolio-details-modern.html', des: "Click here to check out our Modern selection" },
+      { category: 'Traditional', image: Trad1, previewLink: hero_img, detailsLink: 'portfolio-details-traditional.html', des: "Check out our Traditional selection." },
+       { category: 'Traditional', image: Trad2, previewLink: hero_img, detailsLink: 'portfolio-details-traditional.html', des: "Check out our Traditional selection." },
+        { category: 'Rustic', image: rustic2, previewLink: 'assets/img/portfolio/rustic/rustic2.png', detailsLink: 'portfolio-details-rustic.html', des: "Check out our Rustic selection." },
+         { category: 'Rustic', image: rustic3, previewLink: 'assets/img/portfolio/rustic/rustic2.png', detailsLink: 'portfolio-details-rustic.html', des: "Check out our Rustic selection." },
+          { category: 'Red', image: rustic3, previewLink: 'assets/img/portfolio/rustic/rustic2.png', detailsLink: 'portfolio-details-rustic.html', des: "Check out our Rustic selection."}
+        ];
 
     const filteredItems =
         activeButton === 'All'
@@ -95,6 +102,14 @@ function Portfolio(props, ref) {
                             >
                                 Rustic
                             </li>
+                            <li
+                                onClick={() => handleButtonClick('Craftsman')}
+                                className={activeButton === 'Craftsman' ? 'filter-active' : ''}
+                            >
+                                Craftsman
+                            </li>
+                            
+                            
                         </ul>    
                         <div className="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
       {filteredItems.map((item, index) => (
